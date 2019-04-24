@@ -1,6 +1,8 @@
 package edu.usal.negocio.dominio;
 
-public abstract class Empleado {
+import java.io.Serializable;
+
+public abstract class Empleado implements Serializable {
 
 	private int id;
 	private String nombre;
