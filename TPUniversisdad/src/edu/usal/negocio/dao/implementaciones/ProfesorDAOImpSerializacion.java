@@ -5,6 +5,7 @@ import java.util.*;
 
 import edu.usal.negocio.dao.interfaces.ProfesorDAO;
 import edu.usal.negocio.dominio.Profesor;
+import edu.usal.util.*;
 
 public class ProfesorDAOImpSerializacion implements ProfesorDAO {
 
@@ -19,7 +20,7 @@ public class ProfesorDAOImpSerializacion implements ProfesorDAO {
 		}
 
 		profesores.add(profesor);
-
+		String pathProfesor = PropertiesUtil.getInstance().getPropertyProfesor();
 		FileOutputStream archSalida = new FileOutputStream(new File("profesor.dat"));
 		ObjectOutputStream ouStream = new ObjectOutputStream(archSalida);
 
